@@ -2,6 +2,8 @@ FROM ubuntu:latest
 
 RUN apt update
 RUN apt upgrade -y
+RUN apt install -y iputils-ping
+RUN apt install telnet
 
 WORKDIR /usr/app/src
 

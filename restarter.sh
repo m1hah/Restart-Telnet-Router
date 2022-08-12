@@ -2,24 +2,16 @@
 
 # Variables/Constants
 LOG_FILE_CLEARED_LAST_IN_SEC=$(date +%s)
-LOG_FILE="$(pwd)/restarter.log"
+LOG_FILE="$(pwd)/running.log"
 LOG_FILE_CLEAR_FREQ_IN_SEC=86400
 CHECK_FREQUENCY_IN_SEC=300
 FAILURE_TOLERANCE_IN_SEC=5
 SLEEP_AFTER_REBOOT_IN_SEC=450
 
-HOST='#####'
-USERNAME='#####'
-PASSWORD='#####'
-
-# echo -n "HOST: "; read HOST
-# echo -n "USERNAME: "; read USERNAME
-# echo -n "PASSWORD: "; read -s PASSWORD
-
 # checkConnection checks to see if internet connection exists.
 function checkConnection() {
     log "Checking connection..."
-    ping -c 2 10.90.0.1 &> /dev/null
+    ping -c 2 8.8.8.8 &> /dev/null
     if [[ $? -ne 0 ]]; then
         return 1
     fi
@@ -56,7 +48,7 @@ function rebootRouter() {
     service network-manager restart
     sleep 5s
     log "Rebooting router..."
-    eval "{ sleep 2; echo ${USERNAME}; sleep 3; echo ${PASSWORD}; sleep 3; echo 'dev reboot'; sleep 5; }" | telnet ${HOST}
+    eval "{ sleep 2; echo '####'; sleep 3; echo '####'; sleep 3; echo 'reboot'; sleep 5; }" | telnet ####
     log "Reboot completed successfully!"
 }
 

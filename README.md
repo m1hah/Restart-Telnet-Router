@@ -1,7 +1,7 @@
 # Restart Telnet (Router)
 Restart any telnet-capable router when the network is down.
 
-Code used: https://github.com/herrberk/router-resetter
+Forked: https://github.com/herrberk/router-resetter
 
 Build your docker image with commands below.
 

@@ -25,8 +25,8 @@ nano restarter.sh
 4.
 Build an image and run it as daemon.
 ```
-sudo docker build -t [imagename] .
-sudo docker run --name [name] -d [imagename]
+sudo docker build -t restart-telnet-router .
+sudo docker run --name restart-telnet-router -d restart-telnet-router
 ```
 5. 
 You can exec into the docker and check your logs.

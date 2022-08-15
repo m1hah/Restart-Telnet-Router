@@ -31,6 +31,6 @@ sudo docker run --name restart-telnet-router -d restart-telnet-router
 5. 
 You can exec into the docker and check your logs.
 ```
-sudo docker exec -it [name] /bin/bash
+sudo docker exec -it restart-telnet-router /bin/bash
 cat running.log
 ```

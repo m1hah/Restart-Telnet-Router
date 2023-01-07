@@ -23,7 +23,7 @@ Change to:
 nano restarter.sh
 ```
 4.
-Build an image and run it as daemon.
+Build an image and run it detached.
 ```
 sudo docker build -t restart-telnet-router .
 sudo docker run --name restart-telnet-router -d restart-telnet-router

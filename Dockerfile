@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+# or use bash:latest
 
 RUN apt update
 RUN apt upgrade -y
